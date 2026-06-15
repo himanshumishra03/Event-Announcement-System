@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Announcement System</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Event Announcement System</h1>
+      <p>Subscribe for updates and announce new events instantly.</p>
+    </header>
+
+    <section class="card">
+      <h2>Subscribe</h2>
+      <form id="subscribe-form" novalidate>
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+        <button id="subscribe-btn" type="submit">Subscribe</button>
+      </form>
+      <p id="subscribe-message" class="message" aria-live="polite"></p>
+    </section>
+
+    <section class="card">
+      <h2>Create Event (Admin)</h2>
+      <form id="event-form" novalidate>
+        <label for="title">Event title</label>
+        <input id="title" name="title" type="text" placeholder="AWS Community Meetup" required>
+
+        <label for="date">Event date</label>
+        <input id="date" name="date" type="date" required>
+
+        <label for="description">Event description</label>
+        <textarea id="description" name="description" rows="4" placeholder="What is this event about?" required></textarea>
+
+        <button id="event-btn" type="submit">Create Event</button>
+      </form>
+      <p id="event-message" class="message" aria-live="polite"></p>
+    </section>
+
+    <section class="card">
+      <h2>Recent Events</h2>
+      <p id="events-status" class="message" aria-live="polite"></p>
+      <div id="events-list"></div>
+    </section>
+  </main>
+
+  <script src="./config.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "event-announcement-system-local",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "start-local": "npm --prefix backend start",
+    "dev-local": "npm --prefix backend run dev"
+  }
+}

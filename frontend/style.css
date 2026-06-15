@@ -1,0 +1,149 @@
+:root {
+  color-scheme: light;
+  --bg: #f6f8fc;
+  --card: #ffffff;
+  --text: #1a1f36;
+  --muted: #5b6478;
+  --primary: #3958ff;
+  --primary-hover: #2b45d4;
+  --success: #0d7a3c;
+  --error: #b42318;
+  --border: #d9deeb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(160deg, #eef2ff, var(--bg));
+  color: var(--text);
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+.header h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+}
+
+.header p {
+  margin: 0 0 1.5rem;
+  color: var(--muted);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 6px 18px rgba(26, 31, 54, 0.06);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+label {
+  font-weight: 600;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.65rem 0.75rem;
+  transition: border-color 0.2s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--primary-hover);
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.message {
+  min-height: 1.2rem;
+  margin: 0.75rem 0 0;
+  font-size: 0.95rem;
+}
+
+.message.success {
+  color: var(--success);
+}
+
+.message.error {
+  color: var(--error);
+}
+
+.event-item {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.75rem;
+  margin-top: 0.65rem;
+  background: #fafbff;
+}
+
+.event-item h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1rem;
+}
+
+.event-meta {
+  margin: 0 0 0.35rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.event-desc {
+  margin: 0;
+  line-height: 1.4;
+}
+
+@media (max-width: 640px) {
+  .header h1 {
+    font-size: 1.55rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+}
